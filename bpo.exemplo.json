@@ -1,0 +1,9 @@
+{
+  "_leia": "Copie este arquivo para bpo.json (na mesma pasta) e troque pelos dados do seu BPO. Só a versão com agente (pasta codigo/) usa este arquivo; a página do navegador guarda tudo nela mesma.",
+  "nome_bpo": "Seu BPO Financeiro",
+  "contato": "(11) 90000-0000",
+  "cor_principal": "#0B1B33",
+  "cor_destaque": "#2EA8E6",
+  "pasta_paineis": "C:/Users/voce/Documents/paineis",
+  "url_paineis": "https://seu-usuario.github.io/paineis"
+}

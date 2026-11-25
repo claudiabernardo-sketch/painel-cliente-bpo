@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel do Cliente BPO | Cláudia Bernardo</title>
+<meta name="description" content="Suba o extrato financeiro do Conta Azul e monte o dashboard do mês do cliente, com a logo e as cores do seu BPO e do cliente. Entregue como arquivo ou como link com senha.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="barra"><div class="dentro">
+  <span class="marca-logo"></span>
+  <div><b>Painel do Cliente BPO</b><small>por Cláudia Bernardo</small></div>
+</div></header>
+
+<main class="pagina">
+  <h1>O dashboard do mês, a partir do extrato do Conta Azul</h1>
+  <p class="intro">Suba o extrato financeiro, coloque a logo e as cores do seu BPO e do cliente, e entregue o painel como <b>arquivo</b> (WhatsApp ou e-mail) ou como <b>link com senha</b>. O extrato não sai do seu computador: tudo acontece aqui, no seu navegador.</p>
+
+  <section class="etapa">
+    <h2><span>1</span> Suba o extrato do Conta Azul</h2>
+    <label class="soltar" id="soltar">
+      <input type="file" id="arquivo" accept=".xls,.xlsx">
+      <b>Arraste aqui o arquivo extrato_financeiro.xls</b>
+      <small>ou clique para escolher. Não tem um agora? <a href="#" id="usar-exemplo">Use o extrato fictício da Padaria Modelo</a>.</small>
+    </label>
+    <p class="aviso" id="status" role="status"></p>
+  </section>
+
+  <section class="etapa" id="etapa-marca">
+    <h2><span>2</span> Personalize</h2>
+    <div class="grade">
+      <fieldset>
+        <legend>O seu BPO</legend>
+        <label>Nome do BPO <input id="nomeBpo" placeholder="Ex.: Empreenda BPO"></label>
+        <label>Contato (opcional) <input id="contato" placeholder="Ex.: (11) 99999-9999"></label>
+        <label>Logo do BPO <input type="file" id="logoBpo" accept="image/png,image/jpeg,image/webp"></label>
+        <div class="previa-logo" id="previa-logoBpo"></div>
+      </fieldset>
+      <fieldset>
+        <legend>O cliente</legend>
+        <label>Nome do cliente <input id="cliente" placeholder="Ex.: Padaria Modelo"></label>
+        <div class="cores">
+          <label>Cor principal <input type="color" id="corCliente" value="#0B1B33"></label>
+          <label>Cor de destaque <input type="color" id="corDestaque" value="#2EA8E6"></label>
+        </div>
+        <label>Logo do cliente <input type="file" id="logoCliente" accept="image/png,image/jpeg,image/webp"></label>
+        <div class="previa-logo" id="previa-logoCliente"></div>
+      </fieldset>
+    </div>
+    <div class="grade">
+      <label>Mês do painel <select id="mes"></select></label>
+      <label>O que o seu BPO recomenda (opcional, aparece no painel)
+        <textarea id="comentario" rows="3" placeholder="Ex.: A conta de energia subiu. Vale pedir a revisão da tarifa."></textarea></label>
+    </div>
+    <p class="dica">Tudo fica guardado neste navegador: no mês que vem, é só subir o extrato novo e escolher o cliente.</p>
+  </section>
+
+  <section class="etapa">
+    <h2><span>3</span> Confira</h2>
+    <p class="dica">Confira os números com o Conta Azul antes de mandar: o painel é do seu BPO.</p>
+    <iframe id="previa" title="Prévia do painel do cliente" sandbox></iframe>
+  </section>
+
+  <section class="etapa">
+    <h2><span>4</span> Entregue</h2>
+    <div class="entrega">
+      <div class="opcao">
+        <h3>Como arquivo</h3>
+        <p>Baixe e mande pelo WhatsApp ou por e-mail. O cliente abre no celular. Nada vai para a internet.</p>
+        <button id="baixar-aberto" disabled>Baixar o painel</button>
+      </div>
+      <div class="opcao">
+        <h3>Como link com senha</h3>
+        <p>Baixe a versão trancada e publique (passo a passo abaixo). Sem a senha, ninguém vê os números, nem quem achar o link.</p>
+        <button id="baixar-trancado" disabled>Baixar a versão com senha</button>
+        <label class="site">Endereço do seu site de painéis (depois de criar, passo 3 abaixo)
+          <input id="site" placeholder="https://seu-usuario.github.io/paineis"></label>
+        <div class="senha" id="caixa-senha" hidden>
+          <p>Senha deste cliente: <b id="senha"></b></p>
+          <p id="link-cliente"></p>
+          <p class="dica">Ela fica a mesma todo mês. Mande o link e a senha por caminhos diferentes: o link por e-mail e a senha pelo WhatsApp, por exemplo. <a href="#" id="nova-senha">Trocar a senha</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="etapa como">
+    <h2>Como fazer, passo a passo</h2>
+    <details open><summary>1. Exportar o extrato no Conta Azul</summary>
+      <ol>
+        <li>No Conta Azul do cliente, abra o <b>extrato financeiro</b> (movimentações da conta).</li>
+        <li>Escolha o período: pegue pelo menos os <b>últimos 12 meses</b>, para o gráfico e a comparação.</li>
+        <li>Exporte em <b>Excel</b>. O arquivo vem com o nome <b>extrato_financeiro.xls</b>. Não abra e salve antes de subir aqui.</li>
+      </ol>
+      <p class="dica">Os nomes dos menus do Conta Azul mudam de tempos em tempos. O que importa é o arquivo: o extrato financeiro, em Excel.</p>
+    </details>
+    <details><summary>2. Mandar como arquivo (o jeito mais simples)</summary>
+      <ol>
+        <li>Clique em <b>Baixar o painel</b>. Vai baixar um arquivo como <b>painel-padaria-modelo-2026-11.html</b>.</li>
+        <li>Mande esse arquivo pelo WhatsApp ou por e-mail. No celular, o cliente toca no arquivo e abre no navegador.</li>
+        <li>Quer em PDF? Abra o arquivo no seu computador, aperte <b>Ctrl + P</b> e escolha <b>Salvar como PDF</b>.</li>
+      </ol>
+    </details>
+    <details><summary>3. Publicar como link com senha (GitHub Pages, gratuito)</summary>
+      <p><b>Só na primeira vez:</b></p>
+      <ol>
+        <li>Crie uma conta gratuita em <b>github.com</b>.</li>
+        <li>Clique em <b>New repository</b> (novo repositório). Nome: <b>paineis</b>. Deixe <b>Public</b> e marque <b>Add README</b>. Clique em <b>Create repository</b>.</li>
+        <li>No repositório, vá em <b>Settings</b>, depois <b>Pages</b>. Em <b>Branch</b>, escolha <b>main</b> e clique em <b>Save</b>. Em 1 ou 2 minutos, o GitHub mostra o endereço: <b>https://seu-usuario.github.io/paineis/</b>.</li>
+      </ol>
+      <p><b>Todo mês, para cada cliente:</b></p>
+      <ol>
+        <li>Clique em <b>Baixar a versão com senha</b>. Vai baixar um arquivo com um código no nome, como <b>k7m2p9xq.html</b>. O código é do cliente e não muda (não tem o nome dele, de propósito).</li>
+        <li>No repositório <b>paineis</b>, clique em <b>Add file</b>, depois <b>Upload files</b>, e arraste o arquivo.</li>
+        <li>Clique em <b>Commit changes</b>. Em 1 ou 2 minutos, o link fica: <b>https://seu-usuario.github.io/paineis/k7m2p9xq.html</b>.</li>
+        <li>No mês seguinte, faça igual: o arquivo novo, com o mesmo nome, substitui o anterior. O link e a senha do cliente continuam os mesmos.</li>
+      </ol>
+      <p class="dica">Por que com senha: o GitHub Pages é público. A página vai trancada (cifrada com AES-256) e só abre com a senha. Nunca publique a versão aberta.</p>
+    </details>
+    <details><summary>4. Quer automatizar com o agente?</summary>
+      <p>Na pasta <b>codigo/</b> deste projeto há a versão em Python, que o Claude (aba Code) ou o ChatGPT (modo Work) rodam para você todo mês, com as mesmas contas e o mesmo cadeado. Veja o <b>COMO-FAZER.md</b>.</p>
+    </details>
+  </section>
+</main>
+<footer class="rodape">Painel do Cliente BPO · Cláudia Bernardo · O extrato é lido no seu navegador e não é enviado a lugar nenhum. As contas seguem o regime de caixa (data do pagamento) e deixam de fora as transferências entre contas da própria empresa.</footer>
+
+<script src="vendor/xlsx.full.min.js"></script>
+<script src="logica.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

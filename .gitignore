@@ -1,0 +1,16 @@
+# Dados dos clientes: NUNCA no repositório
+saida/
+extratos/
+comentarios/
+senhas.csv
+links.csv
+bpo.json
+*.xls
+*.xlsx
+!exemplos/extrato_ficticio_padaria.xls
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.claude/settings.local.json
