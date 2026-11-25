@@ -110,7 +110,11 @@
   function atualizar() {
     var ok = !!estado.lancs && !!$('mes').value;
     $('baixar-aberto').disabled = $('baixar-trancado').disabled = !ok;
-    if (!ok) { $('previa').srcdoc = ''; return; }
+    if (!ok) {
+      $('previa').srcdoc = '<p style="font:16px Segoe UI,Arial,sans-serif;color:#64748B;text-align:center;margin-top:120px">' +
+        'Suba o extrato do Conta Azul no passo 1 e o painel aparece aqui.</p>';
+      return;
+    }
     try {
       estado.dados = P.calcular(estado.lancs, +$('mes').value);
       estado.html = P.montar(estado.dados, config());
