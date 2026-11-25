@@ -13,7 +13,10 @@ O painel responde as perguntas que o cliente sempre faz:
 - Quais foram os maiores pagamentos?
 - O que o meu BPO recomenda? (um comentário seu, opcional)
 
-Veja um exemplo pronto, com dados fictícios: [exemplos/painel_exemplo_padaria.html](https://claudiabernardo-sketch.github.io/painel-cliente-bpo/exemplos/painel_exemplo_padaria.html)
+Veja os exemplos prontos, com dados fictícios da Padaria Modelo:
+
+- Painel aberto (o que vai como arquivo): [painel_exemplo_padaria.html](https://claudiabernardo-sketch.github.io/painel-cliente-bpo/exemplos/painel_exemplo_padaria.html)
+- Painel com senha (o que vai como link): [painel_com_senha.html](https://claudiabernardo-sketch.github.io/painel-cliente-bpo/exemplos/painel_com_senha.html), senha **PADARIA-MODELO**
 
 ## Como funciona
 
